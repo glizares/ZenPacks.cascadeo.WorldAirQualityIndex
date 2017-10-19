@@ -17,6 +17,8 @@ classes:
     label: Station
 
     properties:
+      uid:
+        label: Station ID
       url:
         label: URL
 
@@ -31,3 +33,26 @@ device_classes:
       zSnmpMonitorIgnore: true
       zCollectorPlugins:
         - cascadeo.WorldAirQualityIndex.Stations
+  
+    templates:
+      Station:
+        description: Station air quality index monitoring
+        targetPythonClass: ZenPacks.cascadeo.WorldAirQualityIndex.WorldAirQualityIndexStation
+
+        datasources:
+          airqualityinformation:
+            type: Python
+            plugin_classname: ZenPacks.cascadeo.WorldAirQualityIndex.datasources.WorldAirQualityIndexDataSource.AirQualityInformation
+            cycletime: "600"
+
+            datapoints:
+              aqi: GAUGE
+        
+        graphs:
+          Air Quality Index:
+            miny: 0
+
+            graphpoints:
+              AQI:
+                dpName: airqualityinformation_aqi
+                format: "%4.0lf"

@@ -52,6 +52,7 @@ class Stations(PythonPlugin):
             for result in responseJSON['data']:
                 om = self.objectMap({
                     'id': self.prepId(result['uid']),
+                    'uid': result['uid'],
                     'title': result['station']['name'],
                     'url': result['station']['url']
                 })
