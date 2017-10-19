@@ -3,12 +3,12 @@
 # or saved.  Do not modify them directly here.
 # NB: PACKAGES is deprecated
 NAME = "ZenPacks.cascadeo.WorldAirQualityIndex"
-VERSION = "1.0.0dev"
-AUTHOR = "Your Name Here"
+VERSION = "0.1.0"
+AUTHOR = "James Wyson"
 LICENSE = ""
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.cascadeo']
 PACKAGES = ['ZenPacks', 'ZenPacks.cascadeo', 'ZenPacks.cascadeo.WorldAirQualityIndex']
-INSTALL_REQUIRES = ['ZenPacks.zenoss.ZenPackLib']
+INSTALL_REQUIRES = ['ZenPacks.zenoss.ZenPackLib', 'ZenPacks.zenoss.PythonCollector']
 COMPAT_ZENOSS_VERS = ""
 PREV_ZENPACK_NAME = ""
 # STOP_REPLACEMENTS
