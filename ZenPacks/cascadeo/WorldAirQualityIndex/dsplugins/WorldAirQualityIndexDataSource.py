@@ -4,7 +4,6 @@ import logging
 LOG = logging.getLogger('zen.WorldAirQualityIndex')
 
 import json
-import time
 import urllib
 
 from twisted.internet.defer import inlineCallbacks, returnValue
@@ -54,15 +53,14 @@ class AirQualityInformation(PythonDataSourcePlugin):
                 continue
 
             # loop over datapoints inside datasource
-            currentObservation = responseJSON['data']
+            currentObservation = responseJSON['data'][0]
             # data points as are defined in zenpack.yaml and easier if named matching the response JSON
             for datapointID in (x.id for x in datasource.points):
                 if datapointID not in currentObservation:
-                    continue;
+                    continue
 
                 dpName = '_'.join((datasource.datasource, datapointID))
                 value = float(currentObservation[datapointID])
-                LOG.info("Writing value %f", value)
 
                 data['values'][datasource.component][dpName] = (value, 'N')
         

@@ -42,7 +42,7 @@ device_classes:
         datasources:
           airqualityinformation:
             type: Python
-            plugin_classname: ZenPacks.cascadeo.WorldAirQualityIndex.datasources.WorldAirQualityIndexDataSource.AirQualityInformation
+            plugin_classname: ZenPacks.cascadeo.WorldAirQualityIndex.dsplugins.AirQualityInformation
             cycletime: "600"
 
             datapoints:
