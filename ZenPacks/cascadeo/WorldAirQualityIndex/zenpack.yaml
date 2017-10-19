@@ -1,1 +1,24 @@
 name: ZenPacks.cascadeo.WorldAirQualityIndex
+
+zProperties:
+  zWorldAirQualityIndexAPIKey:
+    category: World Air Quality Index
+  zWorldAirQualityIndexLocations:
+    type: lines
+    category: World Air Quality Index
+
+classes:
+  WorldAirQualityIndexDevice:
+    base: [zenpacklib.Device]
+    label: World Air Quality Index Device
+  
+  WorldAirQualityIndexStation:
+    base: [zenpacklib.Component]
+    label: Station
+
+    properties:
+      url:
+        label: URL
+
+class_relationships:
+  - WorldAirQualityIndexDevice 1:MC WorldAirQualityIndexStation
