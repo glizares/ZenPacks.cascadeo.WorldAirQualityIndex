@@ -10,7 +10,7 @@ from Products.DataCollector.plugins.CollectorPlugin import PythonPlugin
 
 class Stations(PythonPlugin):
 
-    relname = 'worldAirQualityStations'
+    relname = 'worldAirQualityIndexStations'
     modname = 'ZenPacks.cascadeo.WorldAirQualityIndex.WorldAirQualityIndexStation'
 
     requiredProperties = (
