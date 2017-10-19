@@ -56,3 +56,11 @@ device_classes:
               AQI:
                 dpName: airqualityinformation_aqi
                 format: "%4.0lf"
+
+        thresholds:
+          Pollution Level:
+            dsnames: [airqualityinformation_aqi]
+            eventClass: /Environ
+            severity: Warning
+            type: MinMaxThreshold
+            maxval: 150
