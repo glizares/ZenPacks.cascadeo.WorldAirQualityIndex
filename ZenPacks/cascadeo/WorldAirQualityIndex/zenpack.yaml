@@ -22,3 +22,12 @@ classes:
 
 class_relationships:
   - WorldAirQualityIndexDevice 1:MC WorldAirQualityIndexStation
+
+device_classes:
+  /WorldAirQualityIndex:
+    zProperties:
+      zPythonClass: ZenPacks.cascadeo.WorldAirQualityIndex.WorldAirQualityIndexDevice
+      zPingMonitorIgnore: true
+      zSnmpMonitorIgnore: true
+      zCollectorPlugins:
+        - cascadeo.WorldAirQualityIndex.Stations
