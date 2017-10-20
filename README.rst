@@ -81,6 +81,6 @@ server::
     zenpack --remove ZenPacks.cascadeo.WorldAirQualityIndex
 
 You must then restart the master Zenoss server by running the following command
-as user belonging to serviced group:
+as user belonging to serviced group::
 
     serviced service restart Zenoss.core
