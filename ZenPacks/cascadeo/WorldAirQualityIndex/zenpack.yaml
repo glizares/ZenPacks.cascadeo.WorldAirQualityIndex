@@ -17,8 +17,6 @@ classes:
     label: Station
 
     properties:
-      uid:
-        label: Station ID
       url:
         label: URL
 
