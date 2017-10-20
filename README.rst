@@ -52,7 +52,7 @@ server and run the following command as the ``zenoss`` user::
 After installing you must restart Zenoss by running the following command as
 the ``zenoss`` user on your master Zenoss server::
 
-    zenoss restart
+    serviced service restart Zenoss.core
 
 If installing via source, checkout from version control in directory shared 
 among containers then install using::
@@ -78,7 +78,7 @@ This ZenPack has no special removal considerations. To remove this ZenPack you
 must run the following command as the ``zenoss`` user on your master Zenoss
 server::
 
-    zenpack --remove ZenPacks.zenoss.SolarisMonitor
+    zenpack --remove ZenPacks.cascadeo.WorldAirQualityIndex
 
 You must then restart the master Zenoss server by running the following command
 as user belonging to serviced group:
